@@ -4,218 +4,491 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>شناسنامه حرفه‌ای دبیران کار و فناوری سیلوانا</title>
+<meta name="theme-color" content="#102c46">
+<title>شناسنامه حرفه‌ای دبیران کار و فناوری | سیلوانا</title>
+
 <style>
-*{box-sizing:border-box}
-body{margin:0;background:#f1f6f3;color:#263b33;font-family:Tahoma,Arial,sans-serif;line-height:1.9}
-header{background:linear-gradient(135deg,#124b3c,#278268);color:white;text-align:center;padding:28px 14px}
-header h1{font-size:23px;margin:5px}
-header p{margin:3px}
-main{max-width:850px;margin:22px auto;padding:0 12px}
-form{background:white;padding:22px;border-radius:15px;box-shadow:0 5px 20px #0001}
-section{margin-bottom:28px}
-h2{font-size:17px;color:#17664e;border-bottom:1px solid #dce8e0;padding-bottom:8px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.field{margin-bottom:12px}
-label,.legend{display:block;font-size:13px;font-weight:bold;margin-bottom:5px}
-input[type=text],input[type=tel],input[type=number],select,textarea{
-width:100%;padding:11px;border:1px solid #ccd9d1;border-radius:8px;
-font-family:inherit;font-size:14px;background:white
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --navy: #102c46;
+  --blue: #176b87;
+  --teal: #11a99b;
+  --pale: #eef8fa;
+  --ink: #23394a;
+  --muted: #718292;
+  --line: #dce8ed;
 }
-textarea{min-height:85px;resize:vertical}
-.options{display:flex;flex-wrap:wrap;gap:9px 15px;margin:8px 0}
-.options label{display:flex;align-items:center;gap:5px;font-weight:normal}
-input[type=checkbox]{accent-color:#17664e;width:16px;height:16px}
-.full{grid-column:1/-1}
-.note{background:#fff8e6;border-right:4px solid #d8ac4d;padding:12px;margin-bottom:18px;font-size:13px}
-button{width:100%;padding:14px;background:#17664e;color:white;border:0;border-radius:9px;font: bold 16px Tahoma;cursor:pointer}
-button:hover{background:#104a39}
-footer{text-align:center;color:#6b7d74;font-size:12px;padding:20px}
-@media(max-width:600px){.grid{grid-template-columns:1fr}form{padding:15px}header h1{font-size:20px}}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Vazirmatn', Tahoma, sans-serif;
+  color: var(--ink);
+  background: linear-gradient(145deg,#edf5fa,#f8fbfd 55%,#e5f5f2);
+  line-height: 1.9;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(125deg,#102c46,#176b87 70%,#109b94);
+  color: white;
+  padding: 34px 20px 42px;
+  border-radius: 0 0 32px 32px;
+}
+
+.hero-inner {
+  max-width: 820px;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow {
+  display: inline-block;
+  padding: 4px 12px;
+  border: 1px solid #ffffff55;
+  border-radius: 30px;
+  font-size: 12px;
+  background: #ffffff12;
+}
+
+.hero h1 {
+  font-size: clamp(23px,5vw,34px);
+  line-height: 1.6;
+  margin: 15px 0 6px;
+}
+
+.hero p {
+  margin: 0;
+  color: #e0f4f8;
+  font-size: 14px;
+}
+
+.orbit {
+  position: absolute;
+  left: -35px;
+  top: -48px;
+  width: 190px;
+  height: 190px;
+  border: 1px solid #ffffff35;
+  border-radius: 50%;
+  animation: spin 24s linear infinite;
+}
+
+.orbit::before, .orbit::after {
+  content: "";
+  position: absolute;
+  border: 1px solid #ffffff30;
+  border-radius: 50%;
+}
+.orbit::before { inset: 22px; }
+.orbit::after { inset: 48px; }
+
+.float-icon {
+  position: absolute;
+  font-size: 29px;
+  animation: float 4s ease-in-out infinite;
+  opacity: .8;
+}
+.float-one { left: 22%; top: 28px; }
+.float-two { left: 9%; bottom: 20px; animation-delay: -2s; }
+
+@keyframes float {
+  0%,100% { transform: translateY(0) rotate(-5deg); }
+  50% { transform: translateY(-12px) rotate(6deg); }
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.wrap {
+  max-width: 820px;
+  margin: -17px auto 35px;
+  padding: 0 14px;
+  position: relative;
+}
+
+.intro {
+  background: white;
+  padding: 16px 19px;
+  border-radius: 17px;
+  box-shadow: 0 7px 25px #193d5010;
+  margin-bottom: 17px;
+  font-size: 13px;
+}
+
+.intro strong { color: var(--blue); }
+
+.section {
+  background: white;
+  border: 1px solid #e5edf1;
+  border-radius: 19px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 8px 25px #173b5010;
+  animation: appear .6s ease both;
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(9px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin: 0 0 17px;
+  color: var(--navy);
+  font-size: 17px;
+}
+
+.section-title .icon {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  display: grid;
+  place-items: center;
+  background: var(--pale);
+  border-radius: 13px;
+  font-size: 23px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 15px;
+}
+
+.field { min-width: 0; }
+.full { grid-column: 1 / -1; }
+
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+input, textarea {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  background: #fbfdfe;
+  color: var(--ink);
+  padding: 12px;
+  font: inherit;
+  font-size: 14px;
+  outline: none;
+  transition: border-color .2s, box-shadow .2s, background .2s;
+}
+
+input { min-height: 48px; }
+textarea { min-height: 100px; resize: vertical; }
+
+input:focus, textarea:focus {
+  border-color: var(--teal);
+  background: white;
+  box-shadow: 0 0 0 3px #11a99b18;
+}
+
+input::placeholder, textarea::placeholder { color: #a0aeb8; }
+
+.hint {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+  margin-top: 5px;
+}
+
+.hours {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 10px;
+}
+
+.hours .field {
+  background: #f5fafc;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.hours label { font-size: 12px; }
+.hours input { background: white; }
+
+.required { color: #df5c62; }
+
+.submit-area { padding: 6px 0 20px; }
+
+.submit {
+  width: 100%;
+  min-height: 54px;
+  border: 0;
+  border-radius: 14px;
+  background: linear-gradient(110deg,var(--navy),var(--blue),var(--teal));
+  background-size: 180% 100%;
+  color: white;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px #176b8730;
+  transition: transform .2s, background-position .5s;
+}
+.submit:hover {
+  transform: translateY(-2px);
+  background-position: 100% 0;
+}
+.submit:disabled { opacity: .65; cursor: wait; }
+
+.privacy {
+  text-align: center;
+  color: var(--muted);
+  font-size: 11px;
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  color: #6b7f8b;
+  font-size: 12px;
+  padding: 15px 10px 25px;
+}
+
+@media (max-width:560px) {
+  .hero { padding: 27px 18px 37px; }
+  .section { padding: 16px; }
+  .grid { grid-template-columns: 1fr; gap: 12px; }
+  .full { grid-column: auto; }
+  .hours { gap: 6px; }
+  .hours .field { padding: 7px; }
+  .hours input { padding: 9px 6px; font-size: 12px; }
+  .hours label { font-size: 11px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
 </style>
 </head>
+
 <body>
 
-<header>
-<div style="font-size:32px">🛠️ 💡</div>
-<h1>شناسنامه حرفه‌ای دبیران کار و فناوری</h1>
-<p>گروه آموزشی کار و فناوری متوسطه اول منطقه سیلوانا</p>
-<p>سال تحصیلی ۱۴۰۵–۱۴۰۶</p>
+<header class="hero">
+  <div class="orbit"></div>
+  <span class="float-icon float-one" aria-hidden="true">⚙️</span>
+  <span class="float-icon float-two" aria-hidden="true">💡</span>
+
+  <div class="hero-inner">
+    <span class="eyebrow">گروه آموزشی کار و فناوری</span>
+    <h1>شناسنامه حرفه‌ای دبیران کار و فناوری</h1>
+    <p>نیازسنجی، شناخت توانمندی‌ها و برنامه‌ریزی آموزشی منطقه سیلوانا</p>
+    <p style="margin-top:8px;font-size:12px">سال تحصیلی ۱۴۰۵–۱۴۰۶</p>
+  </div>
 </header>
 
-<main>
-<div class="note">
-همکار گرامی، لطفاً اطلاعات را با دقت تکمیل کنید.
-این اطلاعات برای برنامه‌ریزی آموزشی، شناسایی توانمندی‌های دبیران و
-برگزاری کارگاه‌های تخصصی استفاده خواهد شد.
-</div>
+<main class="wrap">
+  <div class="intro">
+    <strong>همکار گرامی،</strong>
+    این فرم با هدف شناخت تخصص‌ها، تجربه‌ها، نیازهای آموزشی و امکانات موجود
+    تهیه شده است. لطفاً اطلاعات را تا حد امکان دقیق و کامل وارد کنید.
+    پاسخ‌های شما در برنامه‌ریزی فعالیت‌های گروه آموزشی استفاده خواهد شد.
+  </div>
 
-<form action="https://formsubmit.co/dayins5887@gmail.com" method="POST">
-<input type="hidden" name="_subject" value="پاسخ فرم شناسنامه دبیران کار و فناوری سیلوانا">
-<input type="hidden" name="_template" value="table">
-<input type="hidden" name="_captcha" value="false">
+  <form id="teacherForm"
+        action="https://formsubmit.co/dayins5887@gmail.com"
+        method="POST">
 
-<section>
-<h2>۱. اطلاعات فردی و محل خدمت</h2>
-<div class="grid">
-<div class="field">
-<label>نام و نام خانوادگی *</label>
-<input type="text" name="نام و نام خانوادگی" required>
-</div>
-<div class="field">
-<label>شماره همراه *</label>
-<input type="tel" name="شماره همراه" required>
-</div>
-<div class="field">
-<label>نام مدرسه یا مدارس محل خدمت *</label>
-<input type="text" name="مدارس محل خدمت" required>
-</div>
-<div class="field">
-<label>نوع مدرسه</label>
-<select name="نوع مدرسه">
-<option value="">انتخاب کنید</option>
-<option>دولتی</option><option>غیردولتی</option>
-<option>شبانه‌روزی</option><option>روستایی</option><option>سایر</option>
-</select>
-</div>
-<div class="field">
-<label>آخرین مدرک تحصیلی</label>
-<select name="مدرک تحصیلی">
-<option value="">انتخاب کنید</option>
-<option>کاردانی</option><option>کارشناسی</option>
-<option>کارشناسی ارشد</option><option>دکتری</option><option>سایر</option>
-</select>
-</div>
-<div class="field">
-<label>رشته تحصیلی</label>
-<input type="text" name="رشته تحصیلی">
-</div>
-<div class="field">
-<label>سابقه تدریس کار و فناوری (سال)</label>
-<input type="number" name="سابقه تدریس" min="0" max="60">
-</div>
-<div class="field">
-<label>مجموع ساعات تدریس هفتگی *</label>
-<select name="ساعات تدریس هفتگی" required>
-<option value="">انتخاب کنید</option>
-<option>کمتر از ۶ ساعت</option>
-<option>۶ تا ۱۰ ساعت</option>
-<option>۱۱ تا ۱۵ ساعت</option>
-<option>۱۶ تا ۲۰ ساعت</option>
-<option>بیش از ۲۰ ساعت</option>
-</select>
-</div>
-<div class="field full">
-<span class="legend">پایه‌های تدریس‌شده</span>
-<div class="options">
-<label><input type="checkbox" name="پایه تدریس" value="هفتم"> هفتم</label>
-<label><input type="checkbox" name="پایه تدریس" value="هشتم"> هشتم</label>
-<label><input type="checkbox" name="پایه تدریس" value="نهم"> نهم</label>
-</div>
-</div>
-</div>
-</section>
+    <input type="hidden" name="_subject"
+      value="شناسنامه حرفه‌ای دبیران کار و فناوری منطقه سیلوانا - ۱۴۰۵-۱۴۰۶">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next"
+      value="https://karvitoir.github.io/site/shenasname.html?sent=1">
 
-<section>
-<h2>۲. روزهای حضور در منطقه</h2>
-<div class="field">
-<span class="legend">در چه روزهایی در مدارس منطقه سیلوانا حضور دارید؟ *</span>
-<div class="options">
-<label><input type="checkbox" name="روزهای حضور" value="شنبه"> شنبه</label>
-<label><input type="checkbox" name="روزهای حضور" value="یکشنبه"> یکشنبه</label>
-<label><input type="checkbox" name="روزهای حضور" value="دوشنبه"> دوشنبه</label>
-<label><input type="checkbox" name="روزهای حضور" value="سه‌شنبه"> سه‌شنبه</label>
-<label><input type="checkbox" name="روزهای حضور" value="چهارشنبه"> چهارشنبه</label>
-<label><input type="checkbox" name="روزهای حضور" value="پنجشنبه"> پنجشنبه</label>
-</div>
-</div>
-<div class="field">
-<span class="legend">روزهای مناسب برای جلسات و کارگاه‌های گروه آموزشی (اختیاری)</span>
-<div class="options">
-<label><input type="checkbox" name="روز مناسب جلسه" value="شنبه"> شنبه</label>
-<label><input type="checkbox" name="روز مناسب جلسه" value="یکشنبه"> یکشنبه</label>
-<label><input type="checkbox" name="روز مناسب جلسه" value="دوشنبه"> دوشنبه</label>
-<label><input type="checkbox" name="روز مناسب جلسه" value="سه‌شنبه"> سه‌شنبه</label>
-<label><input type="checkbox" name="روز مناسب جلسه" value="چهارشنبه"> چهارشنبه</label>
-<label><input type="checkbox" name="روز مناسب جلسه" value="پنجشنبه"> پنجشنبه</label>
-</div>
-</div>
-</section>
+    <section class="section">
+      <h2 class="section-title">
+        <span class="icon">👤</span> اطلاعات فردی و حرفه‌ای
+      </h2>
+      <div class="grid">
+        <div class="field">
+          <label for="fullname">نام و نام خانوادگی <span class="required">*</span></label>
+          <input id="fullname" name="نام و نام خانوادگی" required>
+        </div>
+        <div class="field">
+          <label for="phone">شماره تماس <span class="required">*</span></label>
+          <input id="phone" name="شماره تماس" type="tel"
+            inputmode="tel" required>
+        </div>
+        <div class="field full">
+          <label for="school">نام مدرسه یا مدارس محل تدریس <span class="required">*</span></label>
+          <input id="school" name="نام مدرسه یا مدارس" required>
+        </div>
+        <div class="field">
+          <label for="degree">آخرین مدرک تحصیلی</label>
+          <input id="degree" name="آخرین مدرک تحصیلی"
+            placeholder="مدرک تحصیلی خود را بنویسید">
+        </div>
+        <div class="field">
+          <label for="field">رشته تحصیلی</label>
+          <input id="field" name="رشته تحصیلی"
+            placeholder="رشته دانشگاهی">
+        </div>
+        <div class="field full">
+          <label for="experience">سابقه تدریس و تجربه‌های مرتبط</label>
+          <textarea id="experience" name="سابقه تدریس و تجربه‌های مرتبط"
+            placeholder="سابقه تدریس، تجربه اجرایی، پژوهشی یا مهارت‌های حرفه‌ای خود را بنویسید."></textarea>
+        </div>
+      </div>
+    </section>
 
-<section>
-<h2>۳. مهارت‌ها و توانمندی‌های تخصصی</h2>
-<span class="legend">در کدام زمینه‌ها توانایی یا تجربه دارید؟ (چند گزینه)</span>
-<div class="options">
-<label><input type="checkbox" name="مهارت" value="تدریس کتاب کار و فناوری"> تدریس کتاب</label>
-<label><input type="checkbox" name="مهارت" value="الگوریتم"> الگوریتم و تفکر رایانشی</label>
-<label><input type="checkbox" name="مهارت" value="برنامه‌نویسی و پایتون"> برنامه‌نویسی و پایتون</label>
-<label><input type="checkbox" name="مهارت" value="هوش مصنوعی"> هوش مصنوعی</label>
-<label><input type="checkbox" name="مهارت" value="رباتیک"> رباتیک</label>
-<label><input type="checkbox" name="مهارت" value="الکترونیک"> الکترونیک</label>
-<label><input type="checkbox" name="مهارت" value="برق و تأسیسات الکتریکی"> برق و تأسیسات الکتریکی</label>
-<label><input type="checkbox" name="مهارت" value="تأسیسات مکانیکی"> تأسیسات مکانیکی</label>
-<label><input type="checkbox" name="مهارت" value="ساخت و کار با ابزار"> ساخت و کار با ابزار</label>
-<label><input type="checkbox" name="مهارت" value="نقشه‌کشی و CAD"> نقشه‌کشی و CAD</label>
-<label><input type="checkbox" name="مهارت" value="آفیس و مهارت رایانه‌ای"> آفیس و مهارت رایانه‌ای</label>
-<label><input type="checkbox" name="مهارت" value="تولید محتوای دیجیتال"> تولید محتوای دیجیتال</label>
-<label><input type="checkbox" name="مهارت" value="چاپ سه‌بعدی"> چاپ سه‌بعدی</label>
-</div>
-<div class="field">
-<label>سایر مهارت‌ها و تجربه‌ها</label>
-<textarea name="سایر مهارت‌ها"></textarea>
-</div>
-</section>
+    <section class="section">
+      <h2 class="section-title">
+        <span class="icon">🕒</span> ساعات هفتگی تدریس کار و فناوری
+      </h2>
+      <p style="font-size:12px;color:#718292;margin-top:-8px">
+        تعداد ساعات تدریس هر پایه را بنویسید؛ در صورت نداشتن تدریس در یک پایه، کادر را خالی بگذارید.
+      </p>
+      <div class="hours">
+        <div class="field">
+          <label for="grade7">پایه هفتم</label>
+          <input id="grade7" name="ساعات تدریس پایه هفتم"
+            placeholder="مثلاً ۴ ساعت">
+        </div>
+        <div class="field">
+          <label for="grade8">پایه هشتم</label>
+          <input id="grade8" name="ساعات تدریس پایه هشتم"
+            placeholder="مثلاً ۶ ساعت">
+        </div>
+        <div class="field">
+          <label for="grade9">پایه نهم</label>
+          <input id="grade9" name="ساعات تدریس پایه نهم"
+            placeholder="مثلاً ۳ ساعت">
+        </div>
+      </div>
+    </section>
 
-<section>
-<h2>۴. نیازهای آموزشی و مشکلات تدریس</h2>
-<span class="legend">در چه کارگاه‌هایی تمایل به شرکت دارید؟</span>
-<div class="options">
-<label><input type="checkbox" name="نیاز آموزشی" value="روش تدریس"> روش تدریس</label>
-<label><input type="checkbox" name="نیاز آموزشی" value="برنامه‌نویسی"> برنامه‌نویسی</label>
-<label><input type="checkbox" name="نیاز آموزشی" value="هوش مصنوعی"> هوش مصنوعی</label>
-<label><input type="checkbox" name="نیاز آموزشی" value="رباتیک"> رباتیک</label>
-<label><input type="checkbox" name="نیاز آموزشی" value="الکترونیک و برق"> الکترونیک و برق</label>
-<label><input type="checkbox" name="نیاز آموزشی" value="تأسیسات و ساخت"> تأسیسات و ساخت</label>
-<label><input type="checkbox" name="نیاز آموزشی" value="نقشه‌کشی"> نقشه‌کشی و CAD</label>
-<label><input type="checkbox" name="نیاز آموزشی" value="تولید محتوای آموزشی"> تولید محتوای آموزشی</label>
-<label><input type="checkbox" name="نیاز آموزشی" value="ارزشیابی پروژه‌محور"> ارزشیابی پروژه‌محور</label>
-</div>
-<div class="grid">
-<div class="field">
-<label>مهم‌ترین مشکلات در تدریس</label>
-<textarea name="مشکلات تدریس"></textarea>
-</div>
-<div class="field">
-<label>امکانات موجود در مدرسه</label>
-<textarea name="امکانات مدرسه" placeholder="رایانه، اینترنت، ابزار، کارگاه و..."></textarea>
-</div>
-<div class="field full">
-<label>امکانات یا حمایت‌های موردنیاز</label>
-<textarea name="حمایت‌های موردنیاز"></textarea>
-</div>
-</div>
-</section>
+    <section class="section">
+      <h2 class="section-title">
+        <span class="icon">📅</span> برنامه حضور و همکاری
+      </h2>
+      <div class="grid">
+        <div class="field full">
+          <label for="schoolDays">روزهای حضور در مدرسه یا مدارس منطقه</label>
+          <textarea id="schoolDays" name="روزهای حضور در مدارس"
+            placeholder="مثلاً شنبه و دوشنبه در مدرسه اول؛ یکشنبه در مدرسه دوم"></textarea>
+        </div>
+        <div class="field full">
+          <label for="meetingDays">روزها و ساعت‌های مناسب برای جلسات گروه آموزشی</label>
+          <textarea id="meetingDays" name="زمان مناسب جلسات گروه"
+            placeholder="روز و ساعت مناسب خود را بنویسید."></textarea>
+        </div>
+      </div>
+    </section>
 
-<section>
-<h2>۵. همکاری با گروه آموزشی</h2>
-<span class="legend">در کدام زمینه‌ها امکان همکاری دارید؟ (اختیاری)</span>
-<div class="options">
-<label><input type="checkbox" name="زمینه همکاری" value="ارائه تجربه"> ارائه تجربه به همکاران</label>
-<label><input type="checkbox" name="زمینه همکاری" value="تدریس کارگاه"> تدریس در کارگاه تخصصی</label>
-<label><input type="checkbox" name="زمینه همکاری" value="تولید محتوا"> تولید محتوای آموزشی</label>
-<label><input type="checkbox" name="زمینه همکاری" value="تیم دانش‌آموزی"> هدایت تیم‌های دانش‌آموزی</label>
-<label><input type="checkbox" name="زمینه همکاری" value="پژوهش‌سرا"> همکاری در پژوهش‌سرا</label>
-<label><input type="checkbox" name="زمینه همکاری" value="فعلاً امکان همکاری ندارم"> فعلاً امکان همکاری ندارم</label>
-</div>
-<div class="field">
-<label>پیشنهادها و توضیحات تکمیلی</label>
-<textarea name="پیشنهادها"></textarea>
-</div>
-</section>
+    <section class="section">
+      <h2 class="section-title">
+        <span class="icon">🛠️</span> تخصص‌ها و مهارت‌های حرفه‌ای
+      </h2>
+      <div class="field">
+        <label for="skills">در چه زمینه‌هایی مهارت یا تجربه دارید؟</label>
+        <textarea id="skills" name="تخصص‌ها و مهارت‌ها"
+          placeholder="مثلاً رباتیک، برنامه‌نویسی، هوش مصنوعی، الکترونیک، برق، تأسیسات، طراحی رایانه‌ای، تولید محتوا یا سایر مهارت‌ها"></textarea>
+      </div>
+    </section>
 
-<button type="submit">ارسال اطلاعات</button>
-</form>
-<footer>کاری از گروه آموزشی کار و فناوری منطقه سیلوانا<br>سال تحصیلی ۱۴۰۵–۱۴۰۶</footer>
+    <section class="section">
+      <h2 class="section-title">
+        <span class="icon">🎓</span> نیازهای آموزشی و توانمندسازی
+      </h2>
+      <div class="field">
+        <label for="training">در چه موضوعاتی به آموزش یا توانمندسازی نیاز دارید؟</label>
+        <textarea id="training" name="نیازهای آموزشی"
+          placeholder="موضوعات موردنیاز، نرم‌افزارها، ابزارها یا دوره‌های آموزشی پیشنهادی را بنویسید."></textarea>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">
+        <span class="icon">🏫</span> امکانات و تجهیزات آموزشی
+      </h2>
+      <div class="field">
+        <label for="equipment">امکانات، تجهیزات و فضای کارگاهی مدرسه</label>
+        <textarea id="equipment" name="امکانات و تجهیزات مدرسه"
+          placeholder="تجهیزات موجود، کمبودها، وضعیت کارگاه و امکانات قابل استفاده را شرح دهید."></textarea>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">
+        <span class="icon">🚀</span> پیشنهادها و زمینه‌های همکاری
+      </h2>
+      <div class="grid">
+        <div class="field full">
+          <label for="challenges">مهم‌ترین مشکلات و چالش‌های تدریس شما چیست؟</label>
+          <textarea id="challenges" name="مشکلات و چالش‌ها"
+            placeholder="چالش‌های آموزشی، اجرایی، تجهیزاتی یا سایر موارد را بنویسید."></textarea>
+        </div>
+        <div class="field full">
+          <label for="collaboration">در چه فعالیت‌هایی امکان همکاری دارید؟</label>
+          <textarea id="collaboration" name="زمینه‌های همکاری"
+            placeholder="مثلاً برگزاری کارگاه، تولید محتوای آموزشی، هدایت تیم دانش‌آموزی، رباتیک، برنامه‌نویسی یا فعالیت پژوهش‌سرا"></textarea>
+        </div>
+        <div class="field full">
+          <label for="support">چه حمایت‌هایی از گروه آموزشی انتظار دارید؟</label>
+          <textarea id="support" name="انتظارات از گروه آموزشی"
+            placeholder="نیازها و انتظارات خود را بنویسید."></textarea>
+        </div>
+        <div class="field full">
+          <label for="suggestions">پیشنهادهای شما برای بهبود درس کار و فناوری در منطقه</label>
+          <textarea id="suggestions" name="پیشنهادها"
+            placeholder="هر پیشنهاد دیگری دارید، اینجا بنویسید."></textarea>
+        </div>
+      </div>
+    </section>
+
+    <div class="submit-area">
+      <button class="submit" id="submitButton" type="submit">
+        ارسال اطلاعات شناسنامه حرفه‌ای ←
+      </button>
+      <div class="privacy">
+        لطفاً پیش از ارسال، اطلاعات واردشده را بررسی کنید.
+      </div>
+    </div>
+  </form>
+
+  <footer>
+    کاری از گروه آموزشی کار و فناوری منطقه سیلوانا
+    <div>سال تحصیلی ۱۴۰۵–۱۴۰۶</div>
+  </footer>
 </main>
+
+<script>
+const form = document.getElementById('teacherForm');
+const button = document.getElementById('submitButton');
+
+form.addEventListener('submit', function () {
+  button.disabled = true;
+  button.textContent = 'در حال ارسال اطلاعات...';
+});
+
+const params = new URLSearchParams(window.location.search);
+if (params.get('sent') === '1') {
+  const notice = document.createElement('div');
+  notice.textContent = 'درخواست ارسال شد. از همراهی شما سپاسگزاریم.';
+  notice.style.cssText =
+    'max-width:820px;margin:18px auto;padding:16px;background:#dff7e9;color:#176342;border-radius:12px;text-align:center;font-weight:bold;';
+  document.querySelector('.wrap').prepend(notice);
+  history.replaceState({}, '', window.location.pathname);
+}
+</script>
 </body>
 </html>
