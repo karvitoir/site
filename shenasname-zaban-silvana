@@ -1,0 +1,467 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#102b46">
+  <title>شناسنامه حرفه‌ای دبیران زبان انگلیسی | منطقه سیلوانا</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #102b46;
+      --blue: #176b87;
+      --teal: #36a6a0;
+      --light: #f1f7fa;
+      --text: #23384b;
+      --muted: #65798b;
+      --border: #dce7ed;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Vazirmatn", Tahoma, sans-serif;
+      background: linear-gradient(135deg, #edf5fa, #f8fbfd);
+      color: var(--text);
+      line-height: 1.9;
+    }
+
+    .hero {
+      background: linear-gradient(125deg, #102b46, #176b87 70%, #239c9b);
+      color: white;
+      padding: 38px 18px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before, .hero::after {
+      content: "";
+      position: absolute;
+      border: 1px solid #ffffff24;
+      border-radius: 50%;
+      animation: float 9s ease-in-out infinite;
+    }
+
+    .hero::before {
+      width: 230px; height: 230px;
+      top: -120px; right: -50px;
+    }
+
+    .hero::after {
+      width: 180px; height: 180px;
+      bottom: -115px; left: 4%;
+      animation-delay: -3s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0); }
+      50% { transform: translateY(-12px) rotate(12deg); }
+    }
+
+    .hero-content { position: relative; z-index: 1; }
+
+    .badge {
+      display: inline-block;
+      padding: 5px 15px;
+      border: 1px solid #ffffff55;
+      border-radius: 30px;
+      background: #ffffff12;
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+
+    h1 { font-size: clamp(23px, 4vw, 34px); margin: 5px 0; }
+    .hero p { margin: 8px 0 0; color: #e0f3f7; }
+
+    .container {
+      max-width: 900px;
+      margin: -22px auto 35px;
+      padding: 0 15px;
+      position: relative;
+    }
+
+    .notice {
+      background: #e5f5f3;
+      border-right: 4px solid var(--teal);
+      padding: 14px 17px;
+      border-radius: 10px;
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    form {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: clamp(17px, 4vw, 32px);
+      box-shadow: 0 12px 35px #173c5510;
+    }
+
+    .section {
+      margin-bottom: 27px;
+      animation: appear .5s ease both;
+    }
+
+    @keyframes appear {
+      from { opacity: 0; transform: translateY(9px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--navy);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 10px;
+      margin-bottom: 17px;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .section-title span {
+      width: 34px;
+      height: 34px;
+      background: #e4f4f4;
+      color: var(--blue);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      font-size: 17px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .field { min-width: 0; }
+    .full { grid-column: 1 / -1; }
+
+    label, .group-label {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .required { color: #d05c5c; }
+
+    input, select, textarea {
+      width: 100%;
+      font: inherit;
+      font-size: 14px;
+      color: var(--text);
+      border: 1px solid #d6e2e9;
+      border-radius: 9px;
+      padding: 11px 12px;
+      background: #fbfdfe;
+      outline: none;
+      transition: border-color .2s, box-shadow .2s, background .2s;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--teal);
+      box-shadow: 0 0 0 3px #36a6a018;
+      background: white;
+    }
+
+    textarea { min-height: 100px; resize: vertical; }
+
+    .hint {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 5px;
+    }
+
+    .options {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 9px;
+    }
+
+    .option {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      background: #f6fafc;
+      border: 1px solid #e4edf1;
+      border-radius: 9px;
+      padding: 9px 10px;
+      font-size: 13px;
+      cursor: pointer;
+      font-weight: 400;
+      margin: 0;
+      transition: background .2s, border-color .2s;
+    }
+
+    .option:hover {
+      background: #edf8f7;
+      border-color: #b7dedb;
+    }
+
+    .option input {
+      width: 16px;
+      height: 16px;
+      margin: 5px 0 0;
+      accent-color: var(--teal);
+      flex-shrink: 0;
+    }
+
+    .submit-btn {
+      width: 100%;
+      border: none;
+      border-radius: 11px;
+      padding: 14px;
+      background: linear-gradient(110deg, #176b87, #239c9b);
+      color: white;
+      font: inherit;
+      font-weight: 700;
+      font-size: 16px;
+      cursor: pointer;
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px #176b872c;
+    }
+
+    .submit-btn:disabled {
+      opacity: .65;
+      cursor: wait;
+      transform: none;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 5px 12px 28px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .ltr { direction: ltr; text-align: left; }
+
+    @media (max-width: 600px) {
+      .grid, .options { grid-template-columns: 1fr; }
+      .hero { padding: 30px 15px 43px; }
+      form { border-radius: 14px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <div class="badge">گروه آموزشی زبان انگلیسی</div>
+      <h1>شناسنامه حرفه‌ای دبیران زبان انگلیسی</h1>
+      <p>منطقه سیلوانا | سال تحصیلی ۱۴۰۵–۱۴۰۶</p>
+      <p>شناسایی ظرفیت‌ها، نیازهای آموزشی و زمینه‌های همکاری دبیران</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="notice">
+      همکار گرامی، لطفاً اطلاعات زیر را با دقت تکمیل کنید. این اطلاعات با هدف شناخت توانمندی‌ها، نیازهای آموزشی و برنامه‌ریزی فعالیت‌های گروه آموزشی جمع‌آوری می‌شود.
+      فیلدهای ستاره‌دار الزامی هستند.
+    </div>
+
+    <form action="https://formsubmit.co/hassanbahrampoor@gmail.com"
+          method="POST"
+          id="teacherForm">
+
+      <input type="hidden" name="_subject" value="شناسنامه حرفه‌ای دبیر زبان انگلیسی - منطقه سیلوانا">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" style="display:none">
+
+      <section class="section">
+        <h2 class="section-title"><span>۱</span> اطلاعات فردی و شغلی</h2>
+        <div class="grid">
+          <div class="field">
+            <label for="fullname">نام و نام خانوادگی <b class="required">*</b></label>
+            <input id="fullname" name="نام و نام خانوادگی" required>
+          </div>
+
+          <div class="field">
+            <label for="phone">شماره تلفن همراه <b class="required">*</b></label>
+            <input id="phone" name="شماره تلفن همراه" type="tel"
+                   inputmode="tel" placeholder="۰۹۱۲۱۲۳۴۵۶۷" required>
+          </div>
+
+          <div class="field">
+            <label for="school">نام مدرسه محل خدمت <b class="required">*</b></label>
+            <input id="school" name="نام مدرسه" required>
+          </div>
+
+          <div class="field">
+            <label for="email">پست الکترونیکی</label>
+            <input id="email" name="پست الکترونیکی" type="email"
+                   class="ltr" placeholder="name@example.com">
+          </div>
+
+          <div class="field">
+            <label for="degree">آخرین مدرک تحصیلی</label>
+            <select id="degree" name="آخرین مدرک تحصیلی">
+              <option value="">انتخاب کنید</option>
+              <option>کاردانی</option>
+              <option>کارشناسی</option>
+              <option>کارشناسی ارشد</option>
+              <option>دکتری</option>
+              <option>سایر</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="major">رشته تحصیلی</label>
+            <input id="major" name="رشته تحصیلی"
+                   placeholder="مثلاً آموزش زبان انگلیسی">
+          </div>
+
+          <div class="field">
+            <label for="experience">سابقه تدریس زبان انگلیسی (سال)</label>
+            <input id="experience" name="سابقه تدریس" type="number"
+                   min="0" max="60" placeholder="مثلاً ۱۲">
+          </div>
+
+          <div class="field">
+            <label for="hours">مجموع ساعات هفتگی تدریس زبان انگلیسی</label>
+            <input id="hours" name="مجموع ساعات هفتگی تدریس"
+                   placeholder="مثلاً هفتم: ۶، هشتم: ۴، نهم: ۶">
+          </div>
+
+          <div class="field full">
+            <label for="grades">پایه‌های مورد تدریس</label>
+            <div class="options">
+              <label class="option"><input type="checkbox" name="پایه‌های تدریس" value="هفتم"> پایه هفتم</label>
+              <label class="option"><input type="checkbox" name="پایه‌های تدریس" value="هشتم"> پایه هشتم</label>
+              <label class="option"><input type="checkbox" name="پایه‌های تدریس" value="نهم"> پایه نهم</label>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title"><span>۲</span> توانمندی‌ها و علایق تخصصی</h2>
+        <p class="hint">مواردی را که در آن‌ها توانایی یا علاقه دارید، انتخاب کنید.</p>
+        <div class="options">
+          <label class="option"><input type="checkbox" name="توانمندی تخصصی" value="تدریس مکالمه"> آموزش مکالمه و مهارت گفتاری</label>
+          <label class="option"><input type="checkbox" name="توانمندی تخصصی" value="مهارت شنیداری"> تقویت مهارت شنیداری</label>
+          <label class="option"><input type="checkbox" name="توانمندی تخصصی" value="خواندن و درک مطلب"> آموزش خواندن و درک مطلب</label>
+          <label class="option"><input type="checkbox" name="توانمندی تخصصی" value="نوشتن"> آموزش نوشتن و جمله‌سازی</label>
+          <label class="option"><input type="checkbox" name="توانمندی تخصصی" value="تدریس خلاق"> روش‌های تدریس خلاق و فعال</label>
+          <label class="option"><input type="checkbox" name="توانمندی تخصصی" value="بازی آموزشی"> بازی‌ها و فعالیت‌های آموزشی</label>
+          <label class="option"><input type="checkbox" name="توانمندی تخصصی" value="تولید محتوای دیجیتال"> تولید محتوای دیجیتال</label>
+          <label class="option"><input type="checkbox" name="توانمندی تخصصی" value="هوش مصنوعی"> استفاده از هوش مصنوعی در آموزش زبان</label>
+          <label class="option"><input type="checkbox" name="توانمندی تخصصی" value="ابزارهای تعاملی"> ابزارها و نرم‌افزارهای تعاملی</label>
+          <label class="option"><input type="checkbox" name="توانمندی تخصصی" value="ارزشیابی"> طراحی آزمون و ارزشیابی</label>
+          <label class="option"><input type="checkbox" name="توانمندی تخصصی" value="اقدام‌پژوهی"> اقدام‌پژوهی و پژوهش در آموزش</label>
+          <label class="option"><input type="checkbox" name="توانمندی تخصصی" value="سایر"> سایر توانمندی‌ها</label>
+        </div>
+
+        <div class="field" style="margin-top:15px">
+          <label for="skills">توضیح درباره توانمندی‌ها، تجربه‌ها یا دستاوردهای ویژه</label>
+          <textarea id="skills" name="توضیح توانمندی‌ها"
+                    placeholder="در صورت تمایل، تجربه یا توانایی ویژه خود را بنویسید."></textarea>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title"><span>۳</span> نیازهای آموزشی و حرفه‌ای</h2>
+        <p class="hint">در انتخاب موضوعات مورد نیاز خود، می‌توانید چند گزینه را علامت بزنید.</p>
+        <div class="options">
+          <label class="option"><input type="checkbox" name="نیاز آموزشی" value="روش تدریس و مدیریت کلاس"> روش تدریس و مدیریت کلاس</label>
+          <label class="option"><input type="checkbox" name="نیاز آموزشی" value="تقویت مکالمه و تلفظ"> تقویت مکالمه و تلفظ</label>
+          <label class="option"><input type="checkbox" name="نیاز آموزشی" value="طراحی فعالیت‌های جذاب"> طراحی فعالیت‌های جذاب و بازی‌محور</label>
+          <label class="option"><input type="checkbox" name="نیاز آموزشی" value="تولید محتوای دیجیتال"> تولید محتوای دیجیتال</label>
+          <label class="option"><input type="checkbox" name="نیاز آموزشی" value="ابزارهای هوش مصنوعی"> ابزارهای هوش مصنوعی در آموزش زبان</label>
+          <label class="option"><input type="checkbox" name="نیاز آموزشی" value="طراحی آزمون"> طراحی آزمون و ارزشیابی عملکردی</label>
+          <label class="option"><input type="checkbox" name="نیاز آموزشی" value="کتاب و برنامه درسی"> تحلیل کتاب درسی و برنامه‌ریزی آموزشی</label>
+          <label class="option"><input type="checkbox" name="نیاز آموزشی" value="اقدام‌پژوهی"> اقدام‌پژوهی و درس‌پژوهی</label>
+          <label class="option"><input type="checkbox" name="نیاز آموزشی" value="تدریس دانش‌آموزان با نیازهای متفاوت"> راهکارهای تدریس متناسب با تفاوت‌های فردی</label>
+          <label class="option"><input type="checkbox" name="نیاز آموزشی" value="سایر"> سایر موارد</label>
+        </div>
+
+        <div class="field" style="margin-top:15px">
+          <label for="training">چه دوره یا کارگاهی برای شما مفیدتر است؟</label>
+          <textarea id="training" name="پیشنهاد دوره آموزشی"
+                    placeholder="موضوعات پیشنهادی خود را بنویسید."></textarea>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title"><span>۴</span> همکاری با گروه آموزشی</h2>
+
+        <div class="field">
+          <label>آیا برای همکاری در فعالیت‌های گروه آموزشی آمادگی دارید؟</label>
+          <div class="options">
+            <label class="option"><input type="radio" name="آمادگی همکاری" value="بله"> بله، آماده همکاری هستم.</label>
+            <label class="option"><input type="radio" name="آمادگی همکاری" value="در صورت فراهم بودن شرایط"> در صورت فراهم بودن شرایط</label>
+            <label class="option"><input type="radio" name="آمادگی همکاری" value="فعلاً خیر"> فعلاً خیر</label>
+          </div>
+        </div>
+
+        <div class="field" style="margin-top:15px">
+          <label>زمینه‌های مورد علاقه برای همکاری</label>
+          <div class="options">
+            <label class="option"><input type="checkbox" name="زمینه همکاری" value="تولید محتوای آموزشی"> تولید محتوای آموزشی</label>
+            <label class="option"><input type="checkbox" name="زمینه همکاری" value="برگزاری کارگاه"> برگزاری کارگاه آموزشی</label>
+            <label class="option"><input type="checkbox" name="زمینه همکاری" value="اشتراک تجربه‌های موفق"> اشتراک تجربه‌های موفق</label>
+            <label class="option"><input type="checkbox" name="زمینه همکاری" value="طراحی نمونه سؤال"> طراحی نمونه سؤال و آزمون</label>
+            <label class="option"><input type="checkbox" name="زمینه همکاری" value="فعالیت پژوهشی"> فعالیت پژوهشی و اقدام‌پژوهی</label>
+            <label class="option"><input type="checkbox" name="زمینه همکاری" value="جشنواره و مسابقه"> جشنواره‌ها و مسابقات آموزشی</label>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title"><span>۵</span> پیشنهادها و مسائل آموزشی</h2>
+        <div class="field">
+          <label for="problems">مهم‌ترین چالش شما در تدریس زبان انگلیسی چیست؟</label>
+          <textarea id="problems" name="چالش‌های آموزشی"
+                    placeholder="چالش‌های کلاس، امکانات، منابع یا یادگیری دانش‌آموزان را شرح دهید."></textarea>
+        </div>
+
+        <div class="field" style="margin-top:15px">
+          <label for="suggestions">پیشنهادها و انتظارات از گروه آموزشی منطقه</label>
+          <textarea id="suggestions" name="پیشنهادها و انتظارات"
+                    placeholder="پیشنهادهای خود را برای بهبود آموزش زبان انگلیسی بنویسید."></textarea>
+        </div>
+      </section>
+
+      <button class="submit-btn" type="submit" id="submitBtn">
+        ارسال شناسنامه حرفه‌ای
+      </button>
+
+      <p class="hint" style="text-align:center;margin-top:12px">
+        پس از ارسال، ممکن است صفحه تأیید سرویس FormSubmit نمایش داده شود.
+      </p>
+    </form>
+  </main>
+
+  <footer class="footer">
+    تهیه‌شده برای گروه آموزشی زبان انگلیسی منطقه سیلوانا
+    <br>
+    سال تحصیلی ۱۴۰۵–۱۴۰۶
+  </footer>
+
+  <script>
+    const form = document.getElementById("teacherForm");
+    const button = document.getElementById("submitBtn");
+
+    form.addEventListener("submit", function () {
+      if (!form.checkValidity()) return;
+      button.disabled = true;
+      button.textContent = "در حال ارسال اطلاعات...";
+    });
+  </script>
+</body>
+</html>
