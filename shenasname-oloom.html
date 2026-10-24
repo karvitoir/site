@@ -1,0 +1,347 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#176b87">
+<title>شناسنامه حرفه‌ای دبیران علوم تجربی</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --primary: #176b87;
+  --secondary: #238b75;
+  --light: #eaf5f7;
+  --text: #243746;
+  --muted: #657786;
+  --border: #dce7eb;
+  --white: #ffffff;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Vazirmatn, Tahoma, sans-serif;
+  background: linear-gradient(145deg,#edf7fa,#f5f8fb,#e8f5f0);
+  color: var(--text);
+  line-height: 1.9;
+}
+.container {
+  width: min(900px,94%);
+  margin: 35px auto;
+}
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 35px 24px;
+  border-radius: 25px;
+  color: white;
+  text-align: center;
+  background: linear-gradient(125deg,#155e75,#176b87,#238b75);
+  box-shadow: 0 15px 35px #176b8725;
+  animation: appear .7s ease;
+}
+.hero:after {
+  content: "⚗";
+  position: absolute;
+  left: 20px;
+  bottom: -45px;
+  font-size: 150px;
+  opacity: .10;
+}
+.hero .symbol { font-size: 44px; }
+.hero h1 { font-size: clamp(21px,4vw,30px); margin: 8px 0; }
+.hero p { margin: 5px 0; color: #e0f6f4; }
+.year {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 5px 16px;
+  border: 1px solid #ffffff65;
+  border-radius: 30px;
+  font-size: 14px;
+}
+.intro {
+  margin: 20px 0;
+  padding: 15px 18px;
+  border-right: 4px solid var(--secondary);
+  background: white;
+  border-radius: 12px;
+  color: var(--muted);
+  font-size: 14px;
+}
+form {
+  padding: 24px;
+  border-radius: 22px;
+  background: white;
+  box-shadow: 0 12px 35px #173b4a12;
+}
+.section {
+  margin-bottom: 28px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  animation: appear .6s ease;
+}
+.section h2 {
+  margin: 0 0 18px;
+  padding-bottom: 10px;
+  color: var(--primary);
+  font-size: 18px;
+  border-bottom: 1px solid var(--border);
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 16px;
+}
+.field { min-width: 0; }
+.full { grid-column: 1 / -1; }
+label, .group-title {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d5e1e6;
+  border-radius: 10px;
+  background: #fbfdfe;
+  color: var(--text);
+  font: inherit;
+  font-size: 14px;
+  transition: border .2s, box-shadow .2s;
+}
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px #176b8718;
+}
+textarea { min-height: 100px; resize: vertical; }
+.hint { color: var(--muted); font-size: 12px; }
+.options {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 10px;
+}
+.option {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #fbfdfe;
+  font-size: 13px;
+  cursor: pointer;
+  transition: .2s;
+}
+.option:hover {
+  border-color: var(--secondary);
+  background: #f1faf7;
+}
+.option input {
+  width: 17px;
+  height: 17px;
+  margin-top: 5px;
+  flex-shrink: 0;
+  accent-color: var(--secondary);
+}
+.submit {
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  padding: 15px;
+  color: white;
+  background: linear-gradient(110deg,var(--primary),var(--secondary));
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .2s, opacity .2s;
+}
+.submit:hover { transform: translateY(-2px); }
+.submit:disabled { opacity: .65; cursor: wait; }
+footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 12px;
+  padding: 20px 0;
+}
+@keyframes appear {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media(max-width:600px) {
+  .container { width: 94%; margin: 15px auto; }
+  form { padding: 13px; }
+  .section { padding: 14px; }
+  .grid, .options { grid-template-columns: 1fr; }
+  .hero { padding: 25px 15px; }
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<header class="hero">
+  <div class="symbol">🔬</div>
+  <h1>شناسنامه حرفه‌ای دبیران علوم تجربی</h1>
+  <p>شناخت ظرفیت‌ها، توانمندی‌ها و نیازهای آموزشی دبیران</p>
+  <span class="year">سال تحصیلی ۱۴۰۵–۱۴۰۶</span>
+</header>
+
+<div class="intro">
+  همکار گرامی، لطفاً اطلاعات زیر را با دقت تکمیل کنید.
+  هدف از گردآوری اطلاعات، برنامه‌ریزی بهتر فعالیت‌های گروه آموزشی،
+  شناسایی توانمندی‌ها، تبادل تجربیات و ارتقای کیفیت آموزش علوم تجربی است.
+</div>
+
+<form action="https://formsubmit.co/samanebrahimichem@gmail.com"
+      method="POST">
+
+  <input type="hidden" name="_subject"
+         value="شناسنامه حرفه‌ای دبیران علوم تجربی - سال تحصیلی ۱۴۰۵-۱۴۰۶">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_captcha" value="false">
+
+  <div class="section">
+    <h2>۱. اطلاعات فردی و شغلی</h2>
+    <div class="grid">
+      <div class="field">
+        <label for="fullname">نام و نام خانوادگی *</label>
+        <input id="fullname" name="نام و نام خانوادگی"
+               autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="phone">شماره همراه *</label>
+        <input id="phone" name="شماره همراه" type="tel"
+               inputmode="tel" autocomplete="tel"
+               pattern="09[0-9]{9}" placeholder="09123456789" required>
+      </div>
+      <div class="field">
+        <label for="email">ایمیل (اختیاری)</label>
+        <input id="email" name="ایمیل" type="email"
+               autocomplete="email">
+      </div>
+      <div class="field">
+        <label for="school">نام مدرسه محل خدمت *</label>
+        <input id="school" name="نام مدرسه" required>
+      </div>
+      <div class="field">
+        <label for="area">منطقه / ناحیه آموزشی *</label>
+        <input id="area" name="منطقه یا ناحیه آموزشی" required>
+      </div>
+      <div class="field">
+        <label for="experience">سابقه تدریس علوم تجربی</label>
+        <select id="experience" name="سابقه تدریس علوم تجربی">
+          <option value="">انتخاب کنید</option>
+          <option>کمتر از ۵ سال</option>
+          <option>۵ تا ۱۰ سال</option>
+          <option>۱۱ تا ۲۰ سال</option>
+          <option>بیش از ۲۰ سال</option>
+        </select>
+      </div>
+      <div class="field full">
+        <label for="hours">مجموع ساعات هفتگی تدریس علوم تجربی</label>
+        <input id="hours" name="ساعات هفتگی تدریس"
+               placeholder="مثلاً: هفتم ۶، هشتم ۴، نهم ۶ ساعت">
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>۲. زمینه‌های تخصصی و توانمندی‌ها</h2>
+    <p class="hint">مواردی را که در آن‌ها تجربه یا توانمندی دارید انتخاب کنید.</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="توانمندی‌ها[]" value="طراحی و اجرای آزمایش‌های علوم">طراحی و اجرای آزمایش‌های علوم</label>
+      <label class="option"><input type="checkbox" name="توانمندی‌ها[]" value="آزمایش‌های کم‌هزینه و دست‌ساز">آزمایش‌های کم‌هزینه و دست‌ساز</label>
+      <label class="option"><input type="checkbox" name="توانمندی‌ها[]" value="زیست‌شناسی و علوم زیستی">زیست‌شناسی و علوم زیستی</label>
+      <label class="option"><input type="checkbox" name="توانمندی‌ها[]" value="فیزیک و مفاهیم انرژی">فیزیک و مفاهیم انرژی</label>
+      <label class="option"><input type="checkbox" name="توانمندی‌ها[]" value="شیمی و مواد">شیمی و مواد</label>
+      <label class="option"><input type="checkbox" name="توانمندی‌ها[]" value="زمین‌شناسی و محیط زیست">زمین‌شناسی و محیط زیست</label>
+      <label class="option"><input type="checkbox" name="توانمندی‌ها[]" value="ساخت وسایل و مدل‌های آموزشی">ساخت وسایل و مدل‌های آموزشی</label>
+      <label class="option"><input type="checkbox" name="توانمندی‌ها[]" value="تولید محتوای الکترونیکی">تولید محتوای الکترونیکی</label>
+      <label class="option"><input type="checkbox" name="توانمندی‌ها[]" value="شبیه‌سازها و آزمایشگاه مجازی">شبیه‌سازها و آزمایشگاه مجازی</label>
+      <label class="option"><input type="checkbox" name="توانمندی‌ها[]" value="هوش مصنوعی در آموزش علوم">هوش مصنوعی در آموزش علوم</label>
+      <label class="option"><input type="checkbox" name="توانمندی‌ها[]" value="پژوهش دانش‌آموزی و جشنواره‌ها">پژوهش دانش‌آموزی و جشنواره‌ها</label>
+      <label class="option"><input type="checkbox" name="توانمندی‌ها[]" value="ارزشیابی عملکردی و پروژه‌محور">ارزشیابی عملکردی و پروژه‌محور</label>
+    </div>
+    <div class="field" style="margin-top:16px">
+      <label for="otherSkills">سایر مهارت‌ها و توانمندی‌ها</label>
+      <textarea id="otherSkills" name="سایر توانمندی‌ها"
+        placeholder="توضیح دهید..."></textarea>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>۳. نیازهای آموزشی و توانمندسازی</h2>
+    <p class="hint">موضوعاتی را که برای آموزش بهتر به یادگیری یا پشتیبانی نیاز دارید انتخاب کنید.</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="نیازهای آموزشی[]" value="روش‌های تدریس فعال و اکتشافی">روش‌های تدریس فعال و اکتشافی</label>
+      <label class="option"><input type="checkbox" name="نیازهای آموزشی[]" value="طراحی آزمایش‌های ساده و کم‌هزینه">طراحی آزمایش‌های ساده و کم‌هزینه</label>
+      <label class="option"><input type="checkbox" name="نیازهای آموزشی[]" value="مدیریت و تجهیز آزمایشگاه">مدیریت و تجهیز آزمایشگاه</label>
+      <label class="option"><input type="checkbox" name="نیازهای آموزشی[]" value="ارزشیابی توصیفی و عملکردی">ارزشیابی عملکردی و طراحی تکلیف</label>
+      <label class="option"><input type="checkbox" name="نیازهای آموزشی[]" value="تولید محتوای دیجیتال">تولید محتوای دیجیتال</label>
+      <label class="option"><input type="checkbox" name="نیازهای آموزشی[]" value="کاربرد هوش مصنوعی">کاربرد هوش مصنوعی در آموزش</label>
+      <label class="option"><input type="checkbox" name="نیازهای آموزشی[]" value="شبیه‌سازها و نرم‌افزارهای علمی">شبیه‌سازها و نرم‌افزارهای علمی</label>
+      <label class="option"><input type="checkbox" name="نیازهای آموزشی[]" value="طراحی فعالیت‌های پژوهشی دانش‌آموزی">فعالیت‌های پژوهشی دانش‌آموزی</label>
+      <label class="option"><input type="checkbox" name="نیازهای آموزشی[]" value="تألیف سؤال استاندارد">طراحی سؤال استاندارد</label>
+      <label class="option"><input type="checkbox" name="نیازهای آموزشی[]" value="تدریس مفهومی و رفع بدفهمی‌ها">تدریس مفهومی و رفع بدفهمی‌ها</label>
+    </div>
+    <div class="field" style="margin-top:16px">
+      <label for="needs">مهم‌ترین نیاز آموزشی شما چیست؟</label>
+      <textarea id="needs" name="شرح نیازهای آموزشی"
+        placeholder="موضوع یا دوره آموزشی مورد نیاز خود را بنویسید..."></textarea>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>۴. امکانات و چالش‌های آموزشی</h2>
+    <div class="grid">
+      <div class="field full">
+        <label for="facilities">امکانات موجود در مدرسه</label>
+        <textarea id="facilities" name="امکانات مدرسه"
+          placeholder="مانند آزمایشگاه، مواد مصرفی، تجهیزات، رایانه یا اینترنت..."></textarea>
+      </div>
+      <div class="field full">
+        <label for="challenges">مهم‌ترین چالش‌های تدریس علوم تجربی</label>
+        <textarea id="challenges" name="چالش‌های تدریس"
+          placeholder="محدودیت تجهیزات، زمان، فضای آزمایشگاهی یا سایر موارد..."></textarea>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>۵. همکاری و پیشنهادها</h2>
+    <div class="grid">
+      <div class="field full">
+        <label for="collaboration">در چه زمینه‌هایی آماده همکاری هستید؟</label>
+        <textarea id="collaboration" name="زمینه‌های همکاری"
+          placeholder="برگزاری کارگاه، تبادل تجربه، تهیه محتوای آموزشی، راهنمایی پژوهش‌های دانش‌آموزی و..."></textarea>
+      </div>
+      <div class="field full">
+        <label for="suggestions">پیشنهادهای شما برای بهبود فعالیت گروه آموزشی</label>
+        <textarea id="suggestions" name="پیشنهادهای دبیر"
+          placeholder="پیشنهادها و موضوعات مورد نظر خود را بنویسید..."></textarea>
+      </div>
+    </div>
+  </div>
+
+  <button class="submit" type="submit">ثبت و ارسال اطلاعات</button>
+  <p class="hint" style="text-align:center;margin-top:12px">
+    پیش از ارسال، اطلاعات واردشده را بررسی کنید.
+  </p>
+</form>
+
+<footer>
+  شناسنامه حرفه‌ای دبیران علوم تجربی | سال تحصیلی ۱۴۰۵–۱۴۰۶
+</footer>
+
+</div>
+</body>
+</html>
